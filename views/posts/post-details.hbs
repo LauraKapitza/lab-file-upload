@@ -1,0 +1,12 @@
+<a href='/'>Back</a>
+<h2>Post Detail Page</h2>
+<p>{{post.content}}</p>
+<img class='post-image' src='{{post.picPath}}' alt='{{post.picName}}'>
+<p>by {{post.creatorId.username}}</p>
+<a href='/comment/{{post.id}}'>Comment Post</a>
+{{#each post.comments}}
+  <div class="comment-container">
+    <p>{{content}}</p>
+    <p>{{authorId.username}}</p>
+  </div>
+{{/each}}

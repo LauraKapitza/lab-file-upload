@@ -1,0 +1,20 @@
+<div id="form">
+  <h2>Create A Comment</h2>
+  <form action="/post/{{id}}" method="POST" enctype='multipart/form-data'>
+    <label>
+      Comment
+      <input type="text" name="content" placeholder="Your comment goes here" />
+    </label>
+
+    <label>
+      Select images
+      <input type="file" name="images" multiple>
+    </label>
+
+    <button type="submit">Create Comment</button>
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>

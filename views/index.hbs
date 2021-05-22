@@ -1,2 +1,9 @@
 <h1>{{title}}</h1>
 <p>Welcome Ironhacker!</p>
+{{#each posts}}
+  <div class="post-container">
+    <img class='post-image' src='{{picPath}}' alt='{{picName}}'>
+    <p>{{content}}</p>
+    <a href='/post/{{id}}'>More Details</a>  
+  </div>
+{{/each}}
